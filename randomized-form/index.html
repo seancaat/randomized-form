@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Randomized Form by Sean Catangui</title>
+<meta name="Sean" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../tachyons.css">
+<script type="text/javascript" src="two.min.js"></script>
+<script type="text/javascript" src="Tween.js"></script>
+<script type="text/javascript" src="RequestAnimationFrame.js"></script>  
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  
+<style>
+  ::-webkit-scrollbar { 
+    display: none; 
+  }
+  .title {
+    color: rgb(28,56,240);
+    text-shadow: 6px 6px #77EEDF;
+  }
+  nav, footer {
+    bottom: 0;
+    text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+  }
+  .please {
+    cursor: default;
+  }
+  .hidden {
+    display: none;
+  }
+  .modal {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+  }
+  #exit-btn {
+    z-index: 1;
+    cursor: pointer;
+  }
+  a {
+    cursor: pointer;
+  }
+</style>
+
+
+<body id="body" class="code">
+<!--
+  <header class="fixed w-100 ph3 ph4-m ph5-l pv3 pv4-ns">
+    <nav class="f4">
+      <a class="link near-black fl" href="#">Sean Catangui</a>
+      <a id="contact-button" class="link near-black bb fr">Contact</a>
+      <a id="about-button" class="link near-black bb fr mr3  mr4-ns">About</a>
+    </nav>
+  </header>
+  
+  <footer class="fixed w-100 ph3 ph4-m ph5-l pv3 pv4-ns">
+    <ul class="list f2">
+      <li class="tc">
+        <a class="link near-black fr next" href="#" title="Down"> &#8615; </a>
+      </li>
+    </ul>
+    <a class="f6 link near-black fl next please"> Touch the art! </a>
+  </footer>
+-->
+  
+  <section id="0" class="panel js-list-item js-current-panel pa5 pb5 vh-90 w-100 dark-gray">
+    <h1 class="title tracked-tight f-headline-l f-subheadline-m f1 fw9 tc mt5">Randomized Form</h1>
+    
+    <h2 class="measure center f4 fw3 lh-title">A project by <a class="fw5 black" href="http://catangui.com">Sean Catangui</a> exploring the concepts of infinite uniqueness, computational art, and composition by chance.</h2>
+    
+    <h2 class="measure center f4 fw3 lh-title">Tapping or clicking each section will generate a completely new, one-of-a-kind composition.</h2>
+  </section>
+  
+  <section id="5" class="panel js-list-item vh-100 w-100 bg-near-white">
+  </section>
+  
+  <section id="1" class="panel js-list-item vh-100 w-100 bg-washed-yellow">
+    <script type="text/javascript" src="1.js"></script>
+  </section>
+  
+  <section id="3" class="panel js-list-item vh-100 w-100 bg-dark-gray">
+    <script type="text/javascript" src="3.js"></script>
+  </section>
+  
+  <section id="2" class="panel js-list-item vh-100 w-100 bg-washed-yellow">
+    <script type="text/javascript" src="2.js"></script>
+  </section>
+  
+<!--
+  <section id="6" class="panel js-list-item vh-100 w-100">
+    <script type="text/javascript" src="6.js"></script>
+  </section>
+-->
+  
+<article id="contact-modal" class="mw7 hidden ba mv4 modal">
+  <div class="f4 bg-green near-black mv0 pv2 ph3">
+    <p class="mv0 dib">Contact</p>
+    <a id="#exit-btn" class="link near-black mv0 fr" href=""> &#x2715 </a>
+  </div>
+  <div class="pa3 bt bg-white">
+    <dl class="lh-title">
+      <dt class="f6 f5-ns b">Email</dt>
+      <dd class="ml0 mb2"><a class="link bb near-black" href="mailto:seancaat@gmail.com" target="_new">seancaat@gmail.com</a></dd>
+      
+      <dt class="f6 f5-ns b mt3">Resume</dt>
+      <dd class="ml0 mb2"><a class="link bb near-black" href="./docs/catangui-designer-resume.pdf" target="_new">View here</a></dd>
+      
+      <dt class="f6 f5-ns b mt3">Social Media</dt>
+      <dd class="ml0 mb2"><a target="_new" class="link bb near-black" href="https://www.instagram.com/s3ancat/">Instagram</a></dd>
+      
+      <dd class="ml0 mb2"><a target="_new" class="link bb near-black" href="https://www.goodreads.com/user/show/73620105-seanc">Goodreads</a></dd>
+      
+      <dd class="ml0 mb2"><a target="_new" class="link bb near-black" href="https://twitter.com/_catangui">Twitter</a></dd>
+    </dl>
+  </div>
+</article>
+  
+<article id="about-modal" class="mw6 hidden ba mv4 modal">
+  <div class="f4 bg-gold near-black mv0 pv2 ph3">
+    <p class="mv0 dib">About This Project</p>
+    <a id="#exit-btn" class="link near-black mv0 fr" href=""> &#x2715 </a>
+  </div>
+  <div class="pa3 bt bg-white">
+    <p class="f6 f5-ns lh-copy measure mv0">
+      Currently, digital is largely utilized as a means to distribute or mimic existing media such as photography, text, video, or graphics. Randomized Form started as an examination of what makes digital unique as an artistic medium. In an attempt to identify that uniqueness, I found inspiration in the art of <a class="link bb near-black" href="https://en.wikipedia.org/wiki/Ellsworth_Kelly" target="_new">Ellsworth Kelly</a>, <a class="link bb near-black" href="http://liamstevens.com/" target="_new">Liam Stevens</a>, and <a class="link bb near-black" href="https://en.wikipedia.org/wiki/Josef_Albers" target="_new">Josef Albers</a>, amongst many others.
+    </p>
+  </div>
+</article>
+  
+  <script id="5-script" type="text/javascript" src="5.js"></script>
+  <script type="text/javascript" src="ui.js"></script>
+  
+</body>
+  
+<!--  inspiration -->
+<!--  https://www.dezeen.com/2017/06/01/algorithm-seven-million-different-jars-nutella-packaging-design/ -->
+  

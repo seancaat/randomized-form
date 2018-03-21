@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>SEAN CATANGUI</title>
+<meta name="Sean" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../tachyons.css">
+<script type="text/javascript" src="../two.js"></script>
+  
+  
+  
+  <section id="1" class="vh-100 w-100 ba"></section>
+  
+  
+  
+  <script type="text/javascript">
+    var elem = document.getElementById('1');
+    var params = { width: window.innerWidth, height: window.innerHeight }
+    var two = new Two(params).appendTo(elem);
+
+    var midX = two.width / 2;
+    var midY = two.height / 2;
+    var width = two.width;
+    var height = two.height;
+      
+    var cir1 = two.makeCircle(width*Math.random(), midY, width*0.25);
+    cir1.fill = 'rgb(235,49,60)';
+    cir1.noStroke();
+    
+    var line = two.makeLine(midX, midY, midX+4, midY);
+    
+    //var circle = two.makeCircle(0.6*width, midX, midY);
+    //circle.stroke = 'black';
+    
+  </script>
