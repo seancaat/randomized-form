@@ -1,2 +1,4 @@
 # randomized-form
-Generative graphic art built with two.js.
+Generative graphic art built with javascript.
+
+
